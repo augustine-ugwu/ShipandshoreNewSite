@@ -1,4 +1,4 @@
-"use client"; // This line tells Next.js to treat this component as a client-side component
+"use client";
 
 import { useState } from "react";
 
@@ -28,7 +28,7 @@ export default function Hero() {
       <header className="absolute top-0 left-0 w-full bg-transparent text-white z-20 transition-all duration-300 ease-in-out">
         <nav className="container mx-auto flex items-center justify-between p-6">
           <a href="/">
-            <div className="text-lg  tracking-wider p-16 pr-2 flex items-center space-x-2">
+            <div className="text-lg tracking-wider md:p-16 flex items-center space-x-2">
               <img
                 src="/assets/logo.png"
                 className="h-20 w-auto"
@@ -95,22 +95,31 @@ export default function Hero() {
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
-          <div className="absolute top-0 right-0 bg-black opacity-75 md:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
+          <div className="absolute top-0 right-0 bg-black opacity-90 md:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute p-6 top-4 right-4 text-white text-4xl"
+              aria-label="Close menu">
+              &times;
+            </button>
+
+            {/* Menu Links */}
             <a
               href="#services"
-              className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
+              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}>
               Services
             </a>
             <a
               href="#about"
-              className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
+              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}>
               About Us
             </a>
             <a
               href="#contact"
-              className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
+              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}>
               Contact
             </a>
