@@ -1,11 +1,18 @@
 // src/app/page.js
-export default function Home() {
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-4">Welcome to My App</h1>
-      <p className="text-lg">
-        Get started by editing <code>src/app/page.js</code>.
-      </p>
+    <div>
+      <Navbar />
+      <Hero />
+      <Services />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }

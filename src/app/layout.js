@@ -1,20 +1,27 @@
-// Update layout.js to include Navbar and Footer
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata = {
-  title: "My App",
-  description: "A clean and minimal Next.js app",
+  title: "Your App Name",
+  description: "Your App Description",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Navbar />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 text-gray-800`}>
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );

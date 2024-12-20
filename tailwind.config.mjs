@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#1D4ED8",
+        secondary: "#1E40AF",
+        accent: "#F59E0B",
+      },
+      fontFamily: {
+        sans: ["Geist", "sans-serif"],
+        mono: ["Geist_Mono", "monospace"],
       },
     },
   },
