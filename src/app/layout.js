@@ -19,9 +19,15 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  title: "Your App Name",
+  title: "ShipandShore",
   description: "Your App Description",
 };
+
+// const cursor = document.querySelector(".cursor");
+// document.addEventListener("mousemove", (e) => {
+//   cursor.style.left = e.pageX + "px";
+//   cursor.style.top = e.pageY + "px";
+// });
 
 export default function RootLayout({ children }) {
   return (

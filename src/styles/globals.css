@@ -35,3 +35,12 @@ header {
 .text-secondary {
   color: #ff6f61; /* Your secondary color */
 }
+
+/* .cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.1s;
+} */
