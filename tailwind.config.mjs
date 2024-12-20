@@ -15,8 +15,9 @@ export default {
         accent: "#F59E0B",
       },
       fontFamily: {
-        sans: ["Geist", "sans-serif"],
-        mono: ["Geist_Mono", "monospace"],
+        "geist-sans": ["var(--font-geist-sans)", "sans-serif"],
+        "geist-mono": ["var(--font-geist-mono)", "monospace"],
+        "bebas-neue": ["var(--font-bebas-neue)", "sans-serif"],
       },
     },
   },

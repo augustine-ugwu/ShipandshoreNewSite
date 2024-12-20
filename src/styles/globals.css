@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +21,17 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif; /* Default to Geist Sans */
+}
+
+header {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hover\:text-secondary {
+  color: rgb(182, 182, 182); /* Add a hover effect color */
+}
+
+.text-secondary {
+  color: #ff6f61; /* Your secondary color */
 }
