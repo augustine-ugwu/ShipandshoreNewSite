@@ -31,10 +31,10 @@ export default function Hero() {
             <div className="text-lg tracking-wider md:p-10 flex items-center space-x-2">
               <img
                 src="/assets/logo.png"
-                className="h-20 w-auto"
+                className="md:h-20 h-16 w-auto"
                 alt="Ship and Shore Logo"
               />
-              <span className="font-bebas-neue text-3xl">Shipandshore</span>
+              <span className="font-bebas-neue md:text-3xl">Shipandshore</span>
             </div>
           </a>
 
@@ -147,7 +147,7 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col justify-end h-full md:p-24 p-6 text-white">
-        <p className="font-bebas-neue text-lg md:text-3xl mb-4 max-w-3xl">
+        <p className="font-bebas-neue text-lg md:text-3 xl mb-4 max-w-3xl">
           Shipandshore service limited
         </p>
         <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold mb-4 tracking-wide">
