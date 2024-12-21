@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         "geist-sans": ["var(--font-geist-sans)", "sans-serif"],
         "geist-mono": ["var(--font-geist-mono)", "monospace"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
         "bebas-neue": ["var(--font-bebas-neue)", "sans-serif"],
       },
     },
