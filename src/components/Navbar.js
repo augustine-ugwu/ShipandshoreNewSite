@@ -4,26 +4,41 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [showStickyNavbar, setShowStickyNavbar] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false); // For animation
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight =
         document.getElementById("hero-section")?.offsetHeight ||
         window.innerHeight;
-      setShowStickyNavbar(window.scrollY > heroHeight);
+      const shouldShowNavbar = window.scrollY > heroHeight;
+      setShowStickyNavbar(shouldShowNavbar);
+
+      // Trigger the animation only when the navbar appears
+      if (shouldShowNavbar && !isAnimated) {
+        setIsAnimated(true);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isAnimated]);
 
   return (
     showStickyNavbar && (
       <header
         id="sticky-navbar"
-        className="fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-300 shadow-md">
+        className={`fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-700 ease-out shadow-md ${
+          isAnimated ? "animate-navbar" : ""
+        }`}>
         <nav className="container mx-auto flex items-center justify-between py-6 px-8">
           {/* Logo */}
           <a href="/">
@@ -42,31 +57,31 @@ export default function Navbar() {
             <li>
               <a
                 href="/"
-                className="font-bebas-neue relative cursor-pointer line-permanent">
+                className="nav font-bebas-neue relative cursor-pointer">
                 Home
                 <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
-                href="#services"
-                className="font-bebas-neue relative cursor-pointer">
-                Services
-                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
-              </a>
-            </li>
-            <li>
-              <a
                 href="#about"
-                className="font-bebas-neue relative cursor-pointer">
+                className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
+                href="#services"
+                className="nav font-bebas-neue relative cursor-pointer">
+                Services
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="#contact"
-                className="font-bebas-neue relative cursor-pointer">
+                className="nav font-bebas-neue relative cursor-pointer">
                 Contact
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
@@ -92,8 +107,11 @@ export default function Navbar() {
           </ul>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
-            <button className="text-white p-2" aria-label="Toggle mobile menu">
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-white p-2"
+              aria-label="Toggle mobile menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -104,12 +122,32 @@ export default function Navbar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+                  d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
           </div>
         </nav>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-0 right-0 bg-black opacity-90 lg:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute p-6 top-4 right-4 text-white text-4xl"
+              aria-label="Close menu">
+              &times;
+            </button>
+            <a href="#services" className="font-bebas-neue text-2xl">
+              Services
+            </a>
+            <a href="#about" className="font-bebas-neue text-2xl">
+              About Us
+            </a>
+            <a href="#contact" className="font-bebas-neue text-2xl">
+              Contact
+            </a>
+          </div>
+        )}
       </header>
     )
   );

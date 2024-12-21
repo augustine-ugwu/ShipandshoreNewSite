@@ -43,31 +43,31 @@ export default function Hero() {
             <li>
               <a
                 href="/"
-                className="font-bebas-neue relative cursor-pointer line-permanent">
+                className="nav font-bebas-neue relative cursor-pointer line-permanent">
                 Home
                 <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
-                href="#services"
-                className="font-bebas-neue relative cursor-pointer">
-                Services
-                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
-              </a>
-            </li>
-            <li>
-              <a
                 href="#about"
-                className="font-bebas-neue relative cursor-pointer">
+                className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
+                href="#services"
+                className="nav font-bebas-neue relative cursor-pointer">
+                Services
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="#contact"
-                className="font-bebas-neue relative cursor-pointer">
+                className="nav font-bebas-neue relative cursor-pointer">
                 Contact
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>

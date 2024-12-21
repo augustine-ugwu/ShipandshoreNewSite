@@ -53,13 +53,28 @@ a::after {
   transition: width 0.4s ease, transform 0.4s ease;
 }
 
-a:hover::after {
+.nav:hover::after {
   width: 100%; /* Expands the width to 100% when hovered */
   transform: scaleX(1); /* Ensures the line expands from left to right */
 }
 
-/* Ensure the line stays visible under "Home" */
-a.line-permanent::after {
+.nav.line-permanent::after {
   width: 100%; /* Keep the line visible */
   transform: scaleX(1);
+}
+
+/* Add this to your global CSS or component-specific styles */
+@keyframes navbarFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Start from above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+.animate-navbar {
+  animation: navbarFadeIn 0.6s ease-out forwards; /* Apply the animation */
 }
