@@ -33,46 +33,52 @@ export default function Navbar() {
                 className="h-12 w-auto"
                 alt="Ship and Shore Logo"
               />
-              <span className="font-bebas-neue text-2xl">Shipandshore</span>
+              <span className="font-bebas-neue md:text-3xl">Shipandshore</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-10 text-lg">
+          <ul className="hidden lg:flex space-x-8 text-xl">
             <li>
               <a
                 href="/"
-                className="font-bebas-neue border-b-2 border-white transition-all hover:border-white">
+                className="font-bebas-neue relative cursor-pointer line-permanent">
                 Home
+                <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#services"
-                className="font-bebas-neue border-b-2 border-transparent transition-all hover:border-white">
+                className="font-bebas-neue relative cursor-pointer">
                 Services
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#about"
-                className="font-bebas-neue border-b-2 border-transparent transition-all hover:border-white">
+                className="font-bebas-neue relative cursor-pointer">
                 About Us
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#contact"
-                className="font-bebas-neue border-b-2 border-transparent transition-all hover:border-white">
+                className="font-bebas-neue relative cursor-pointer">
                 Contact
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <button
-                className="flex items-center justify-center text-white transition-all hover:opacity-80 pl-4"
+                className="flex items-center justify-center text-white transition-all hover:opacity-80 transform duration-200 pl-6"
                 aria-label="Search">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
                   width="24"
                   height="24"
                   viewBox="0 0 50 50"

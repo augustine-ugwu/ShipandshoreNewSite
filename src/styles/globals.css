@@ -8,6 +8,7 @@
   --foreground: #171717;
   --font-geist-sans: "Geist", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
+  --font-roboto: "Roboto", sans-serif;
   --font-bebas-neue: "Bebas Neue", sans-serif;
 }
 
@@ -19,9 +20,9 @@
 }
 
 body {
-  color: var(--foreground);
+  color: #1f2937;
   background: var(--background);
-  font-family: var(--font-geist-sans), sans-serif; /* Default to Geist Sans */
+  font-family: var(--font-roboto), sans-serif;
 }
 
 header {
@@ -36,11 +37,29 @@ header {
   color: #ff6f61; /* Your secondary color */
 }
 
-/* .cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  transition: 0.1s;
-} */
+/* CSS for hover animation */
+a {
+  position: relative; /* Position to be relative for positioning the pseudo-element */
+}
+
+a::after {
+  content: ""; /* Adds a pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Initially set to 0 width */
+  height: 2px; /* Line thickness */
+  background-color: white; /* Line color */
+  transition: width 0.4s ease, transform 0.4s ease;
+}
+
+a:hover::after {
+  width: 100%; /* Expands the width to 100% when hovered */
+  transform: scaleX(1); /* Ensures the line expands from left to right */
+}
+
+/* Ensure the line stays visible under "Home" */
+a.line-permanent::after {
+  width: 100%; /* Keep the line visible */
+  transform: scaleX(1);
+}

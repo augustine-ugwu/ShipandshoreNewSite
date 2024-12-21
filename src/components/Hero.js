@@ -39,33 +39,37 @@ export default function Hero() {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-8 text-xl p-10">
+          <ul className="hidden lg:flex space-x-8 text-xl p-10">
             <li>
               <a
                 href="/"
-                className="font-bebas-neue border-b-2 border-white transition-all transform duration-200 cursor-pointer">
+                className="font-bebas-neue relative cursor-pointer line-permanent">
                 Home
+                <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#services"
-                className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer">
+                className="font-bebas-neue relative cursor-pointer">
                 Services
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#about"
-                className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer">
+                className="font-bebas-neue relative cursor-pointer">
                 About Us
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
               <a
                 href="#contact"
-                className="font-bebas-neue transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer">
+                className="font-bebas-neue relative cursor-pointer">
                 Contact
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
             <li>
@@ -89,7 +93,7 @@ export default function Hero() {
           </ul>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
               className="text-white p-2"
@@ -113,7 +117,7 @@ export default function Hero() {
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
-          <div className="absolute top-0 right-0 bg-black opacity-90 md:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
+          <div className="absolute top-0 right-0 bg-black opacity-90 lg:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
             {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -150,7 +154,7 @@ export default function Hero() {
         <p className="font-bebas-neue text-lg md:text-3xl mb-4 max-w-3xl">
           Shipandshore service limited
         </p>
-        <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold mb-4 tracking-wide">
+        <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold tracking-wide">
           welcome to ship and shore group
         </h1>
       </div>
