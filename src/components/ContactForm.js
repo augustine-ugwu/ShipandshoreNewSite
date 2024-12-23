@@ -13,7 +13,6 @@ const ContactForm = () => {
           <p className="text-gray-600 mb-8">
             Reach out to us using the contact form.
           </p>
-
           <div className="text-center mx-auto">
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               {/* Phone */}
