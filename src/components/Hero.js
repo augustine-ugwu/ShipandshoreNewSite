@@ -115,6 +115,16 @@ export default function Hero() {
           </ul>
         </nav>
       </header>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col justify-end h-full md:p-24 p-6 text-white">
+        <p className="font-bebas-neue text-lg md:text-3xl mb-4 max-w-3xl">
+          Shipandshore service limited
+        </p>
+        <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold tracking-wide">
+          welcome to ship and shore group
+        </h1>
+      </div>
     </section>
   );
 }
