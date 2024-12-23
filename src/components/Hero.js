@@ -4,9 +4,14 @@ import { useState } from "react";
 
 export default function Hero() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleAboutDropdown = () => {
+    setIsAboutDropdownOpen((prevState) => !prevState);
   };
 
   return (
@@ -48,13 +53,30 @@ export default function Hero() {
                 <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
             </li>
-            <li>
+            <li
+              className="relative group"
+              onMouseEnter={() => setIsAboutDropdownOpen(true)}
+              onMouseLeave={() => setIsAboutDropdownOpen(false)}>
               <a
                 href="#about"
                 className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>
+              {/* Dropdown Menu */}
+              {isAboutDropdownOpen && (
+                <ul className="absolute top-full left-0 bg-black text-white w-48 py-2 shadow-lg text-sm">
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#management">Management</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#fleet">Fleet</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#companies">Companies</a>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <a
@@ -91,73 +113,8 @@ export default function Hero() {
               </button>
             </li>
           </ul>
-
-          {/* Mobile Navigation */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-white p-2"
-              aria-label="Toggle mobile menu">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
         </nav>
-
-        {/* Mobile Menu Dropdown */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-0 right-0 bg-black opacity-90 lg:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute p-6 top-4 right-4 text-white text-4xl"
-              aria-label="Close menu">
-              &times;
-            </button>
-
-            {/* Menu Links */}
-            <a
-              href="#services"
-              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
-              onClick={() => setIsMobileMenuOpen(false)}>
-              Services
-            </a>
-            <a
-              href="#about"
-              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
-              onClick={() => setIsMobileMenuOpen(false)}>
-              About Us
-            </a>
-            <a
-              href="#contact"
-              className="font-bebas-neue text-2xl transition-all hover:border-b-2 hover:border-white transform duration-200 cursor-pointer"
-              onClick={() => setIsMobileMenuOpen(false)}>
-              Contact
-            </a>
-          </div>
-        )}
       </header>
-
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col justify-end h-full md:p-24 p-6 text-white">
-        <p className="font-bebas-neue text-lg md:text-3xl mb-4 max-w-3xl">
-          Shipandshore service limited
-        </p>
-        <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold tracking-wide">
-          welcome to ship and shore group
-        </h1>
-      </div>
     </section>
   );
 }
