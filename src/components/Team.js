@@ -1,7 +1,6 @@
 import React from "react";
 
 const Team = () => {
-  // Sample team data (replace with actual data)
   const teamMembers = [
     {
       name: "Prince A. A. Ademiluyi",
@@ -19,46 +18,20 @@ const Team = () => {
       image: "/assets/Image5.jpg",
     },
     {
-      name: "Hon. MD Abubakar IGP Retired",
-      image: "/assets/Image6.jpg",
-    },
-    {
-      name: "Mr. Luqman Mamuda",
-      position: "Director",
-      image: "/assets/Image1.jpeg",
-    },
-    {
       name: "Mr. Jerry O. Omughell",
       position: "General Manager - Finance/Admin",
       image: "/assets/Image8.jpeg",
     },
-    {
-      name: "Dr. G. Akisanya",
-      image: "/assets/Avatar.jpeg",
-    },
-    {
-      name: "Barrister G.T. J. Ademola",
-      image: "/assets/Avatar.jpeg",
-    },
+
     {
       name: "Mr. Iftikhar Ahmed",
       position: "COO (Chief Operating Officer)",
       image: "/assets/Image2.jpeg",
     },
     {
-      name: "Captain Stephen Sobaeh",
-      position: "(Master Marine) - Crew Manager",
-      image: "/assets/Avatar.jpeg",
-    },
-    {
       name: "Captain Malik A Khan",
       position: "(Master Mariner) - (DPA)",
       image: "/assets/Image9.jpeg",
-    },
-    {
-      name: "Mr. Pervez Anwar",
-      position: "Marine Engineer",
-      image: "/assets/Avatar.jpeg",
     },
   ];
 
@@ -74,7 +47,7 @@ const Team = () => {
           unique skills and expertise to the table, working together to achieve
           our common goals and deliver exceptional results.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member bg-white p-6 rounded-lg">
               <img
