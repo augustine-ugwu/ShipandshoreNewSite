@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="Ship and Shore Logo"
               />
               <span className="font-bebas-neue md:text-3xl text-white">
-                Shipandshore
+                Shipandshore Group
               </span>
             </div>
           </a>
@@ -38,42 +38,36 @@ export default function Footer() {
         <div className="mt-6 sm:flex sm:items-center sm:justify-between">
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="/about" className="hover:underline me-4 md:me-6">
+              <a href="#" className="hover:underline me-4 md:me-6">
                 About
               </a>
             </li>
             <li>
-              <a
-                href="/privacy-policy"
-                className="hover:underline me-4 md:me-6">
-                Privacy Policy
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Services
               </a>
             </li>
             <li>
-              <a href="/licensing" className="hover:underline me-4 md:me-6">
-                Licensing
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Management
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:underline">
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Fleet
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline me-4 md:me-6">
+                Companies
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
                 Contact
               </a>
             </li>
           </ul>
-
-          {/* Subscribe Section */}
-          <div className="flex items-center mt-6 sm:mt-0">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="px-4 py-2 rounded-l-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
-            />
-            <button
-              className="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700"
-              aria-label="Subscribe">
-              <MailIcon className="h-6 w-6" />
-            </button>
-          </div>
         </div>
 
         {/* Horizontal Divider */}
@@ -83,7 +77,7 @@ export default function Footer() {
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © {new Date().getFullYear()}{" "}
           <a href="https://yourwebsite.com" className="hover:underline">
-            Shipandshore™
+            Shipandshore™ Group
           </a>
           . All Rights Reserved.
         </span>
