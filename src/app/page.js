@@ -1,9 +1,9 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
-import About from "@/components/About";
-import Team from "@/components/Team";
-import Certification from "@/components/Certification";
+import Navbar from "@/app/components/Navbar";
+import Hero from "@/app/components/Hero";
+import Footer from "@/app/components/Footer";
+import About from "@/app/components/About";
+import Team from "@/app/components/Team";
+import Certification from "@/app/components/Certification";
 
 export default function HomePage() {
   return (

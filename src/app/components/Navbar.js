@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Hero() {
+export default function Navbar() {
+  const [showStickyNavbar, setShowStickyNavbar] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false); // For animation
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
@@ -14,29 +16,40 @@ export default function Hero() {
     setIsAboutDropdownOpen((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight =
+        document.getElementById("hero-section")?.offsetHeight ||
+        window.innerHeight;
+      const shouldShowNavbar = window.scrollY > heroHeight;
+      setShowStickyNavbar(shouldShowNavbar);
+
+      // Trigger the animation only when the navbar appears
+      if (shouldShowNavbar && !isAnimated) {
+        setIsAnimated(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isAnimated]);
+
   return (
-    <section id="hero-section" className="relative h-screen overflow-hidden">
-      {/* Video Background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/assets/BgVid.mp4"
-        type="video/mp4"
-        autoPlay
-        loop
-        muted
-        playsInline></video>
-
-      {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-
-      {/* Navigation Bar as part of Hero */}
-      <header className="absolute top-0 left-0 w-full bg-transparent text-white z-20 transition-all duration-300 ease-in-out">
-        <nav className="container mx-auto flex items-center justify-between p-6">
+    showStickyNavbar && (
+      <header
+        id="sticky-navbar"
+        className={`fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-700 ease-out shadow-md ${
+          isAnimated ? "animate-navbar" : ""
+        }`}>
+        <nav className="container mx-auto flex items-center justify-between py-6 px-8">
+          {/* Logo */}
           <a href="/">
-            <div className="text-lg tracking-wider md:p-10 flex items-center space-x-2">
+            <div className="text-lg tracking-wider flex items-center space-x-2">
               <img
                 src="/assets/logo.png"
-                className="md:h-20 h-16 w-auto"
+                className="h-12 w-auto"
                 alt="Ship and Shore Logo"
               />
               <span className="font-bebas-neue md:text-3xl">Shipandshore</span>
@@ -44,7 +57,7 @@ export default function Hero() {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex space-x-8 text-xl p-10">
+          <ul className="hidden lg:flex space-x-8 text-xl">
             <li>
               <a
                 href="/"
@@ -58,7 +71,7 @@ export default function Hero() {
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}>
               <a
-                href="#about"
+                href="/about"
                 className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
@@ -80,7 +93,7 @@ export default function Hero() {
             </li>
             <li>
               <a
-                href="#services"
+                href="/services"
                 className="nav font-bebas-neue relative cursor-pointer">
                 Services
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
@@ -189,16 +202,6 @@ export default function Hero() {
           </div>
         )}
       </header>
-
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col justify-end h-full md:p-24 p-6 text-white">
-        <p className="font-bebas-neue text-lg md:text-3xl mb-4 max-w-3xl">
-          Shipandshore service limited
-        </p>
-        <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold tracking-wide">
-          welcome to shipandshore group
-        </h1>
-      </div>
-    </section>
+    )
   );
 }
