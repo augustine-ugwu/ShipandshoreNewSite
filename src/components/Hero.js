@@ -113,7 +113,81 @@ export default function Hero() {
               </button>
             </li>
           </ul>
+
+          {/* Mobile Navigation */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-white p-2"
+              aria-label="Toggle mobile menu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </nav>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-0 right-0 bg-black opacity-90 lg:hidden w-full h-screen flex flex-col items-center justify-center space-y-6 text-white z-20">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute p-6 top-4 right-4 text-white text-4xl"
+              aria-label="Close menu">
+              &times;
+            </button>
+            <a href="#services" className="font-bebas-neue text-2xl">
+              Services
+            </a>
+            <div>
+              <button
+                onClick={toggleAboutDropdown}
+                className="font-bebas-neue text-2xl flex items-center space-x-2">
+                <span>About Us</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className={`w-6 h-6 transform transition-transform ${
+                    isAboutDropdownOpen ? "rotate-180" : ""
+                  }`}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isAboutDropdownOpen && (
+                <ul className="mt-2 bg-black text-white w-48 py-2 shadow-lg text-sm">
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#management">Management</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#fleet">Fleet</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#companies">Companies</a>
+                  </li>
+                </ul>
+              )}
+            </div>
+            <a href="#contact" className="font-bebas-neue text-2xl">
+              Contact
+            </a>
+          </div>
+        )}
       </header>
 
       {/* Hero Content */}
@@ -122,7 +196,7 @@ export default function Hero() {
           Shipandshore service limited
         </p>
         <h1 className="font-bebas-neue text-5xl md:text-8xl font-bold tracking-wide">
-          welcome to ship and shore group
+          welcome to shipandshore group
         </h1>
       </div>
     </section>

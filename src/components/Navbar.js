@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [showStickyNavbar, setShowStickyNavbar] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false); // For animation
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
@@ -62,7 +61,7 @@ export default function Navbar() {
             <li>
               <a
                 href="/"
-                className="nav font-bebas-neue relative cursor-pointer">
+                className="nav font-bebas-neue relative cursor-pointer line-permanent">
                 Home
                 <span className="absolute left-0 bottom-0 w-full h-0.2 bg-white transition-all transform duration-300"></span>
               </a>
@@ -162,9 +161,41 @@ export default function Navbar() {
             <a href="#services" className="font-bebas-neue text-2xl">
               Services
             </a>
-            <a href="#about" className="font-bebas-neue text-2xl">
-              About Us
-            </a>
+            <div>
+              <button
+                onClick={toggleAboutDropdown}
+                className="font-bebas-neue text-2xl flex items-center space-x-2">
+                <span>About Us</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className={`w-6 h-6 transform transition-transform ${
+                    isAboutDropdownOpen ? "rotate-180" : ""
+                  }`}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isAboutDropdownOpen && (
+                <ul className="mt-2 bg-black text-white w-48 py-2 shadow-lg text-sm">
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#management">Management</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#fleet">Fleet</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <a href="#companies">Companies</a>
+                  </li>
+                </ul>
+              )}
+            </div>
             <a href="#contact" className="font-bebas-neue text-2xl">
               Contact
             </a>
