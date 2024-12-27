@@ -7,7 +7,7 @@ export default function Certification() {
           Certified By
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-4 mx-auto max-w-5xl px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 mx-auto max-w-5xl px-4">
         <div className="flex justify-center items-center">
           <img
             src="/assets/Cert_1.png"
@@ -26,20 +26,6 @@ export default function Certification() {
           <img
             src="/assets/Cert_3.png"
             alt="Certification 3"
-            className="h-auto max-h-24"
-          />
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src="/assets/Cert_4.png"
-            alt="Certification 4"
-            className="h-auto max-h-24"
-          />
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src="/assets/Cert_5.png"
-            alt="Certification 5"
             className="h-auto max-h-24"
           />
         </div>
