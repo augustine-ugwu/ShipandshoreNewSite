@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Team from "@/components/Team";
+import Certification from "@/components/Certification";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Navbar />
       <About />
       <Team />
+      <Certification />
       <ContactForm />
       <Footer />
     </div>
