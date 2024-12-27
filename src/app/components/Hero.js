@@ -58,7 +58,7 @@ export default function Hero() {
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}>
               <a
-                href="#about"
+                href="/about"
                 className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
@@ -67,13 +67,13 @@ export default function Hero() {
               {isAboutDropdownOpen && (
                 <ul className="absolute top-full left-0 bg-black text-white w-48 py-2 shadow-lg text-sm">
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#management">Management</a>
+                    <a href="/management">Management</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#fleet">Fleet</a>
+                    <a href="/fleet">Fleet</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#companies">Companies</a>
+                    <a href="/companies">Companies</a>
                   </li>
                 </ul>
               )}
@@ -145,7 +145,7 @@ export default function Hero() {
               aria-label="Close menu">
               &times;
             </button>
-            <a href="#services" className="font-bebas-neue text-2xl">
+            <a href="/services" className="font-bebas-neue text-2xl">
               Services
             </a>
             <div>
@@ -172,18 +172,18 @@ export default function Hero() {
               {isAboutDropdownOpen && (
                 <ul className="mt-2 bg-black text-white w-48 py-2 shadow-lg text-sm">
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#management">Management</a>
+                    <a href="/management">Management</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#fleet">Fleet</a>
+                    <a href="/fleet">Fleet</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <a href="#companies">Companies</a>
+                    <a href="/companies">Companies</a>
                   </li>
                 </ul>
               )}
             </div>
-            <a href="#contact" className="font-bebas-neue text-2xl">
+            <a href="/contact" className="font-bebas-neue text-2xl">
               Contact
             </a>
           </div>
