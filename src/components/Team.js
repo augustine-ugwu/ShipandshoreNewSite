@@ -8,25 +8,29 @@ const Team = () => {
       image: "/assets/Image4.jpg",
     },
     {
-      name: "Alh. Mohammed Rehman",
-      position: "Director",
+      name: "Mr. Mohammed Rehman",
+      position: "Executive Director",
       image: "/assets/Image3.jpeg",
     },
     {
       name: "Mr. Tousif Mohammed Paracha",
-      position: "Director",
+      position: "Executive Director",
       image: "/assets/Image5.jpg",
+    },
+    {
+      name: "Mr. Emeka Dan Nzelu",
+      position: "Director",
+      image: "/assets/Avatar.jpeg",
+    },
+    {
+      name: "Mr. Iftikhar Ahmed",
+      position: "COO (Chief Operating Officer)",
+      image: "/assets/Image2.jpeg",
     },
     {
       name: "Mr. Jerry O. Omughell",
       position: "General Manager - Finance/Admin",
       image: "/assets/Image8.jpeg",
-    },
-
-    {
-      name: "Mr. Iftikhar Ahmed",
-      position: "COO (Chief Operating Officer)",
-      image: "/assets/Image2.jpeg",
     },
     {
       name: "Captain Malik A Khan",
@@ -47,7 +51,7 @@ const Team = () => {
           unique skills and expertise to the table, working together to achieve
           our common goals and deliver exceptional results.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member bg-white p-6 rounded-lg">
               <img
