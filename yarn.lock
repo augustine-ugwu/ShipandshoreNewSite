@@ -21,6 +21,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:v1":
+  version: 1.0.6
+  resolution: "@heroicons/react@npm:1.0.6"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 10c0/04d77c604be6a9d3373e2cf773ef0f3e9fa02b52ed85260c440e629682dc3045935090811dda0423fa9bb2d5f8090cdbdda54c901dd3598c9bad691d0abce3d6
+  languageName: node
+  linkType: hard
+
 "@img/sharp-darwin-arm64@npm:0.33.5":
   version: 0.33.5
   resolution: "@img/sharp-darwin-arm64@npm:0.33.5"
@@ -1159,6 +1168,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "my-next-app@workspace:."
   dependencies:
+    "@heroicons/react": "npm:v1"
     next: "npm:15.1.2"
     postcss: "npm:^8"
     react: "npm:^19.0.0"
