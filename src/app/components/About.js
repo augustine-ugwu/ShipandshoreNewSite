@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="bg-gray-100">
-      <div className="container mx-auto text-center md:py-24 p-6">
+      <div className="container mx-auto text-center md:py-24 pt-20 pb-12 p-6">
         <h2 className="font-bebas-neue text-2xl mb-8">WHO WE ARE</h2>
         <h1 className="font-bebas-neue md:text-6xl text-4xl">
           We Offer Agency, Facility & Shipping Services
@@ -24,7 +24,7 @@ export default function About() {
             <h2 className="font-bebas-neue text-2xl text-start mb-2">
               Brief about us
             </h2>
-            <p className="text-base text-justify">
+            <p className="text-base text-justify mb-6">
               Ship & Shore Services Limited has been very active and a major
               player in the Nigerian Shipping/Oil & Gas industry. Following the
               need for transportation of petroleum products by the Nigerian
@@ -43,7 +43,7 @@ export default function About() {
               contract of supplying NNPC vessels consistently for over 20 years.
             </p>
             <button className="self-start mt-auto inline-flex items-center gap-2 text-sm font-semibold text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-600 group transition duration-300">
-              <a href="/" className="flex items-center">
+              <a href="/about" className="flex items-center">
                 <span>Read More</span>
                 <span className="transform group-hover:translate-x-1 transition duration-300 pl-2">
                   →

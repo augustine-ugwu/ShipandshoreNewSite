@@ -61,7 +61,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right Section (Contact Form) */}
-        <div className="w-full md:w-1/2  p-10 rounded-sm">
+        <div className="w-full md:w-1/2 md:p-10 rounded-sm">
           <form className="space-y-6">
             {/* Name Field */}
             <div>

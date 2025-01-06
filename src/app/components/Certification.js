@@ -12,21 +12,21 @@ export default function Certification() {
           <img
             src="/assets/Cert_1.png"
             alt="Certification 1"
-            className="h-auto max-h-24"
+            className="h-auto max-h-20 w-52"
           />
         </div>
         <div className="flex justify-center items-center">
           <img
             src="/assets/Cert_2.png"
             alt="Certification 2"
-            className="h-auto max-h-24"
+            className="h-auto max-h-20 w-52"
           />
         </div>
         <div className="flex justify-center items-center">
           <img
             src="/assets/Cert_3.png"
             alt="Certification 3"
-            className="h-auto max-h-24"
+            className="h-auto max-h-20 w-52"
           />
         </div>
       </div>
