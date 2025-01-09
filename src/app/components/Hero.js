@@ -57,9 +57,7 @@ export default function Hero() {
               className="relative group"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}>
-              <a
-                href="/about"
-                className="nav font-bebas-neue relative cursor-pointer">
+              <a className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>

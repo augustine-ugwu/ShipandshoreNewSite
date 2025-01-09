@@ -43,8 +43,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full bg-black text-white z-50 transition-all duration-700 ease-out shadow-md ${
           isAnimated ? "animate-navbar" : ""
         }`}>
-        <nav className="container mx-auto flex items-center justify-between py-6 px-8">
-          {/* Logo */}
+        <nav className="container mx-auto flex items-center justify-between p-8">
           <a href="/">
             <div className="text-lg tracking-wider flex items-center space-x-2">
               <img
@@ -70,9 +69,7 @@ export default function Navbar() {
               className="relative group"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}>
-              <a
-                href="/about"
-                className="nav font-bebas-neue relative cursor-pointer">
+              <a className="nav font-bebas-neue relative cursor-pointer">
                 About Us
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
               </a>

@@ -15,7 +15,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  title: "ShipandShore",
+  title: "SHIPANDSHORE",
   description: "Your App Description",
 };
 

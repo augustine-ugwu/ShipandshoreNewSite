@@ -1,13 +1,19 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
 import Navbar from "@/app/components/Navbar2";
 import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
 
 export default function ContactPage() {
   return (
     <div>
+      {/* Navbar */}
       <Navbar />
-      <div className="min-h-screen bg-gray-100 p-6 pt-24">
+
+      {/* HeroSection */}
+      <HeroSection title="Contact Us" backgroundImage="/assets/1541.jpg" />
+
+      {/* Content */}
+      <div className="min-h-screen bg-gray-100 p-6">
         {" "}
         <div className="container mx-auto text-center  p-6">
           <h2 className="font-bebas-neue text-2xl mb-8">CONTACT US</h2>
