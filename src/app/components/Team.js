@@ -51,7 +51,7 @@ const Team = () => {
           unique skills and expertise to the table, working together to achieve
           our common goals and deliver exceptional results.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 p-6">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member bg-white p-6 rounded-lg">
               <img
