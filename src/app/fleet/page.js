@@ -78,6 +78,9 @@ export default function FleetPage() {
       <div className="min-h-screen bg-gray-100 p-6">
         <section className="pt-14 pb-2">
           <div className="container mx-auto text-center">
+            <h2 className="font-bebas-neue text-2xl mb-8">
+              Our Legacy, Our Fleet
+            </h2>
             <h1 className="font-bebas-neue md:text-6xl text-4xl">
               Powering Excellence in Maritime Services
             </h1>
