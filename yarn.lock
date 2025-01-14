@@ -21,12 +21,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:v1":
-  version: 1.0.6
-  resolution: "@heroicons/react@npm:1.0.6"
+"@heroicons/react@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@heroicons/react@npm:2.2.0"
   peerDependencies:
-    react: ">= 16"
-  checksum: 10c0/04d77c604be6a9d3373e2cf773ef0f3e9fa02b52ed85260c440e629682dc3045935090811dda0423fa9bb2d5f8090cdbdda54c901dd3598c9bad691d0abce3d6
+    react: ">= 16 || ^19.0.0-rc"
+  checksum: 10c0/f8d3cf689b56716339c91df3542f3948115042d1e70e6bc940a3f3e347c0bc78b56aa563917fbd7ce097fe2f38ebb21bffb0db39be914cbc545a754bddae9ab4
   languageName: node
   linkType: hard
 
@@ -769,6 +769,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^11.17.0":
+  version: 11.17.0
+  resolution: "framer-motion@npm:11.17.0"
+  dependencies:
+    motion-dom: "npm:^11.16.4"
+    motion-utils: "npm:^11.16.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/2d56715afe85a2e922a2b174de4f29a0d2b9f973dd9b3cc7b6cc93d45bf1b8ea744f187e2c47ca468f8619c2c8c462db0c2879f3b16f452487a67f381f19e1c0
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
   resolution: "fs-minipass@npm:3.0.3"
@@ -1157,6 +1179,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion-dom@npm:^11.16.4":
+  version: 11.16.4
+  resolution: "motion-dom@npm:11.16.4"
+  dependencies:
+    motion-utils: "npm:^11.16.0"
+  checksum: 10c0/66de6d40aef59d3004aaf17e39c7c2d2c679306207fdb28c73917d6a05e8c962747fea53d2e516c25d994109d38e127943a759fed18a0fadfc2572a3335fc0d2
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^11.16.0":
+  version: 11.16.0
+  resolution: "motion-utils@npm:11.16.0"
+  checksum: 10c0/e68efa08b9546a2fb065537cedcbab1a416d43cdc5773e02ea01408c276e56bbea9ef76d330e80d8536a6ac585b0bbb6f4f2b9d97637d8d36418483e4492ddff
+  languageName: node
+  linkType: hard
+
 "ms@npm:^2.1.3":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
@@ -1168,7 +1206,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "my-next-app@workspace:."
   dependencies:
-    "@heroicons/react": "npm:v1"
+    "@heroicons/react": "npm:^2.2.0"
+    framer-motion: "npm:^11.17.0"
     next: "npm:15.1.2"
     postcss: "npm:^8"
     react: "npm:^19.0.0"
