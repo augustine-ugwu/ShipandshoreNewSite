@@ -40,7 +40,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="bg-white md:pt-32 pt-20 pb-12">
+    <section className="bg-white md:pt-32 pt-20 pb-12">
       <div className="container mx-auto text-center">
         <h2 className="font-bebas-neue text-2xl mb-8">Meet Our Team</h2>
         <h1 className="font-bebas-neue md:text-6xl text-4xl">

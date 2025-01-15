@@ -1,6 +1,6 @@
 export default function Certification() {
   return (
-    <section id="certifications" className="bg-white p-12">
+    <section className="bg-white p-12">
       <hr className="py-12 md:p-8" />
       <div className="container mx-auto text-center ">
         <h2 className="font-bebas-neue text-4xl tracking-wider text-gray-800">

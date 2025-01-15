@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero-section" className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"

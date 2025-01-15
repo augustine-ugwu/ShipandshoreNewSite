@@ -10,10 +10,10 @@ export default function ContactPage() {
       <Navbar />
 
       {/* HeroSection */}
-      <HeroSection title="Contact Us" backgroundImage="/assets/1541.jpg" />
+      <HeroSection title="Contact Us" backgroundImage="/assets/1543.jpg" />
 
       {/* Content */}
-      <div className="min-h-screen bg-gray-100 p-6">
+      <div className="min-h-screen p-6">
         {" "}
         <div className="container mx-auto text-center  p-6">
           <h2 className="font-bebas-neue text-2xl mb-8">CONTACT US</h2>

@@ -10,11 +10,11 @@ export default function ManagementPage() {
       <Navbar />
 
       {/* HeroSection */}
-      <HeroSection title="Management" backgroundImage="/assets/1541.jpg" />
-      <div className="pb-20 bg-grey mx-auto text-center">
+      <HeroSection title="Management" backgroundImage="/assets/1543.jpg" />
+      <div className="pb-20 mx-auto text-center">
         <Team />
       </div>
-      <div className="pb-20 mx-auto text-center">
+      <div className="pb-20 p-4 mx-auto text-center">
         <h1 className="font-bebas-neue md:text-6xl text-4xl">
           Leading with Expertise and Vision
         </h1>

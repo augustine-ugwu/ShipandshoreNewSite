@@ -9,7 +9,7 @@ export default function CompaniesPage() {
       <Navbar />
 
       {/* HeroSection */}
-      <HeroSection title="Companies" backgroundImage="/assets/1541.jpg" />
+      <HeroSection title="Companies" backgroundImage="/assets/1543.jpg" />
 
       {/* Content */}
       <div className="bg-white mx-auto px-6 lg:px-40 py-20 pb-32">
@@ -18,10 +18,10 @@ export default function CompaniesPage() {
           <h1 className="font-bebas-neue text-5xl md:text-6xl text-gray-800 tracking-wide">
             Our Subsidiaries
           </h1>
-          <p className="mt-4 text-gray-700 text-lg">
+          <p className="mt-4 text-gray-700 px-32 text-lg">
             Ship & Shore Services Limited operates through its group of
             subsidiaries, each specializing in key aspects of maritime and
-            energy operations:
+            energy operations.
           </p>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 text-left">
