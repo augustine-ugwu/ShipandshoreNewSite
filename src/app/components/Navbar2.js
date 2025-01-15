@@ -1,15 +1,18 @@
 "use client";
 
 import { useState } from "react";
-
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 export default function Navbar() {
   const [isAnimated, setIsAnimated] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleAboutDropdown = () => {
+    setIsAboutDropdownOpen((prevState) => !prevState);
   };
 
   return (
@@ -30,7 +33,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex space-x-8 text-xl ">
+        <ul className="hidden lg:flex space-x-8 text-xl">
           <li>
             <a
               href="/"
@@ -42,9 +45,8 @@ export default function Navbar() {
             className="relative group"
             onMouseEnter={() => setIsAboutDropdownOpen(true)}
             onMouseLeave={() => setIsAboutDropdownOpen(false)}>
-            <a className="nav font-bebas-neue relative cursor-pointer">
-              About Us
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-white transition-all transform duration-300"></span>
+            <a className="nav font-bebas-neue relative cursor-pointer flex items-center space-x-2">
+              <span>About Us</span>
             </a>
             {/* Dropdown Menu */}
             {isAboutDropdownOpen && (
@@ -129,7 +131,41 @@ export default function Navbar() {
           <a href="/" className="font-bebas-neue text-2xl">
             Home
           </a>
-          <a className="font-bebas-neue text-2xl">About Us</a>
+
+          <div className="relative">
+            <button
+              onClick={toggleAboutDropdown}
+              className="font-bebas-neue text-2xl flex items-center space-x-2">
+              <span>About Us</span>
+              <ChevronDownIcon
+                className={`w-5 h-5 transition-transform duration-200 ${
+                  isAboutDropdownOpen ? "transform rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {/* Mobile Dropdown */}
+            {isAboutDropdownOpen && (
+              <ul className="flex flex-col space-y-4 text-lg mt-4">
+                <li>
+                  <a href="/management" className="hover:bg-gray-800 p-2">
+                    Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/fleet" className="hover:bg-gray-800 p-2">
+                    Fleet
+                  </a>
+                </li>
+                <li>
+                  <a href="/companies" className="hover:bg-gray-800 p-2">
+                    Companies
+                  </a>
+                </li>
+              </ul>
+            )}
+          </div>
+
           <a href="/services" className="font-bebas-neue text-2xl">
             Services
           </a>
