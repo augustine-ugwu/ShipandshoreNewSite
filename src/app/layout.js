@@ -16,7 +16,8 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata = {
   title: "SHIPANDSHORE",
-  description: "Your App Description",
+  description:
+    "Step into the world of seamless logistics and efficient transportation with our comprehensive range of maritime services. We provide and charter vessels for the coastal transportation of petroleum products, crude oil, and its derivatives, ensuring timely and reliable delivery of your cargo.",
 };
 
 export default function RootLayout({ children }) {
