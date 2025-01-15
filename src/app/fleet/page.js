@@ -75,7 +75,7 @@ export default function FleetPage() {
     <div>
       <Navbar />
       <HeroSection title="Our Fleet" backgroundImage="/assets/1541.jpg" />
-      <div className="min-h-screen bg-gray-100 p-6">
+      <div className="min-h-screen bg-white p-6 pb-32">
         <section className="pt-14 pb-2">
           <div className="container mx-auto text-center">
             <h2 className="font-bebas-neue text-2xl mb-8">
