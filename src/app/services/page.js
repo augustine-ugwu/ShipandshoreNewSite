@@ -12,7 +12,7 @@ export default function ServicesPage() {
       <HeroSection title="Our Services" backgroundImage="/assets/1543.jpg" />
 
       {/* Main Section */}
-      <div className="text-center bg-white px-4 md:px-32 py-32">
+      <div className="text-center bg-white px-4 md:px-32 pt-20 pb-32">
         <h2 className="font-bebas-neue text-2xl mb-8">
           Explore the wide range of services we offer to meet your needs.
         </h2>

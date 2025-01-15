@@ -13,9 +13,9 @@ export default function ContactPage() {
       <HeroSection title="Contact Us" backgroundImage="/assets/1543.jpg" />
 
       {/* Content */}
-      <div className="min-h-screen p-6">
+      <div className="min-h-screen py-6">
         {" "}
-        <div className="container mx-auto text-center  p-6">
+        <div className="container mx-auto text-center p-6">
           <h2 className="font-bebas-neue text-2xl mb-8">CONTACT US</h2>
           <h1 className="font-bebas-neue md:text-6xl text-4xl">
             Have Questions? Get in Touch!
