@@ -116,14 +116,13 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
         {/* Text Content */}
-        <div className="absolute inset-0 md:p-20 p-6 md:pt-40 pt-16">
+        <div className="absolute inset-0 md:p-20 p-6 md:pt-40">
           {/* Heading */}
           <h1 className="font-bebas-neue text-white text-4xl md:text-8xl uppercase">
             About Ship & Shore Services Limited
           </h1>
-
           {/* Paragraph */}
-          <p className="text-white text-justify mt-4 md:text-xl leading-relaxed">
+          <p className="text-white text-justify md:text-xl leading-relaxed">
             Since our incorporation in 1987, Ship & Shore Services Limited has
             grown to become a trusted name in Nigeria’s shipping and oil & gas
             sectors. Over the years, we have pioneered many industry
