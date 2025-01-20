@@ -4,7 +4,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Prince A. A. Ademiluyi",
-      position: "Chairman",
+      position: "Executive Director",
       image: "/assets/Image4.jpg",
     },
     {
@@ -23,13 +23,18 @@ const Team = () => {
       image: "/assets/Image10.jpg",
     },
     {
+      name: "Alhaji Nurudeen Tambaya",
+      position: "Director",
+      image: "/assets/Image11.jpeg",
+    },
+    {
       name: "Mr. Iftikhar Ahmed",
       position: "COO (Chief Operating Officer)",
       image: "/assets/Image2.jpeg",
     },
     {
       name: "Mr. Jerry O. Omughell",
-      position: "General Manager - Finance/Admin",
+      position: "GM Admin - Company Secretary",
       image: "/assets/Image8.jpeg",
     },
     {
