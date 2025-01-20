@@ -29,6 +29,34 @@ export default function Certification() {
             className="h-auto max-h-20 w-52"
           />
         </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="/assets/Cert_4.png"
+            alt="Certification 4"
+            className="h-auto max-h-20"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="/assets/Cert_5.png"
+            alt="Certification 5"
+            className="h-auto max-h-20"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="/assets/Cert_6.jpg"
+            alt="Certification 6"
+            className="h-auto max-h-20"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <img
+            src="/assets/Cert_7.jpg"
+            alt="Certification 7"
+            className="h-auto max-h-20"
+          />
+        </div>
       </div>
     </section>
   );
