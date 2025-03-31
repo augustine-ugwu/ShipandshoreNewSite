@@ -40,7 +40,7 @@ const Team = () => {
     {
       name: "Captain Malik A Khan",
       position: "(Master Mariner) - (DPA)",
-      image: "/assets/Image9.jpeg",
+      image: "/assets/Image9.jpg",
     },
   ];
 

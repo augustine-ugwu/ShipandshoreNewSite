@@ -97,7 +97,7 @@ export default function FleetPage() {
 
         {/* Image Grid Container */}
         <div className="mt-8 md:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          {Array.from({ length: 19 }).map((_, index) => (
+          {Array.from({ length: 28 }).map((_, index) => (
             <div key={index} className="flex justify-center">
               <img
                 src={`/assets/${String(index + 1).padStart(2, "0")}.jpg`}
