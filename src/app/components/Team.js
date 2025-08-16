@@ -37,11 +37,11 @@ const Team = () => {
       position: "GM Admin - Company Secretary",
       image: "/assets/Image8.jpeg",
     },
-    {
-      name: "Captain Malik A Khan",
-      position: "(Master Mariner) - (DPA)",
-      image: "/assets/Image9.jpg",
-    },
+    // {
+    //   name: "Captain Malik A Khan",
+    //   position: "(Master Mariner) - (DPA)",
+    //   image: "/assets/Image9.jpg",
+    // },
   ];
 
   return (
