@@ -13,8 +13,12 @@ const fleet = [
     image: "/assets/02.jpg",
   },
   {
-    name: "Battle Axe",
+    name: "TugBoat Stane",
     image: "/assets/10.jpg",
+  },
+  {
+    name: "TugBoat Battle Axe",
+    image: "/assets/11.jpg",
   },
   {
     name: "Sea Pearl",
