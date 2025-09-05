@@ -23,7 +23,7 @@ export default function CompaniesPage() {
             subsidiaries, each specializing in key aspects of maritime and
             energy operations.
           </p>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mt-6 grid grid-cols-1 gap-6">
             <div className="pt-6 text-left">
               <h3 className="font-bebas-neue text-3xl text-gray-800">
                 1. Ghazi Shipping & Trading Company Ltd
@@ -57,6 +57,14 @@ export default function CompaniesPage() {
               <p className="mt-2 text-gray-600">
                 Offers professional cargo surveying and inspection services for
                 maritime cargo operations.
+              </p>
+            </div>
+            <div className="pt-6 text-left">
+              <h3 className="font-bebas-neue text-3xl text-gray-800">
+                5. National Trucks manufacturers limited ( NTML)
+              </h3>
+              <p className="mt-2 text-gray-600">
+                NIGERIA’S LEADING AUTOMOBILE MANUFACTURERS.
               </p>
             </div>
           </div>
